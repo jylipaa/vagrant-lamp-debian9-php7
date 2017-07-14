@@ -7,3 +7,8 @@ sudo cp /vagrant/scripts/vagrant/conf/apache-lamp.conf /etc/apache2/sites-availa
 sudo a2ensite apache-lamp
 sudo a2enmod rewrite
 sudo systemctl reload apache2
+
+sudo mariadb -uroot -e "CREATE DATABASE IF NOT EXISTS vagrant";
+sudo mariadb -uroot -e "CREATE USER IF NOT EXISTS 'vagrant'@'%' IDENTIFIED BY 'vagrant';"
+sudo mariadb -uroot -e "GRANT ALL PRIVILEGES ON vagrant.* TO 'vagrant'@'%';"
+sudo mariadb -uroot -e "FLUSH PRIVILEGES;"

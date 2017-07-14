@@ -2,6 +2,8 @@
 
 Provides a basic LAMP server for local development with Debian 9, Apache 2.4, MariaDB 10.1, PHP 7.0 and XDebug.
 
+MariaDB will also be setup with a user vagrant (p: vagrant) granted with all options on empty database named vagrant.
+
 ## Getting Started
 
 Clone, run ``` vagrant up ``` and start developing. If everything goes 
@@ -14,6 +16,9 @@ VirtualBox and Vagrant with vagrant-vbguest plugin. When VirtualBox and Vagrant 
 vagrant plugin install vagrant-vbguest
 ```
 
+## TODO
+
+* Xdebug remote debugging
 
 ## Authors
 
