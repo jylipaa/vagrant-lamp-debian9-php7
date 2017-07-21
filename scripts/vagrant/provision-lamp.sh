@@ -8,6 +8,10 @@ sudo a2ensite apache-lamp
 sudo a2enmod rewrite
 sudo systemctl reload apache2
 
+# MariaDB - bind to all ip addresses for remote connections
+sudo cp /vagrant/scripts/vagrant/conf/mariadb-bind-ip.cnf /etc/mysql/mariadb.conf.d/99-bind-all-ip.cnf
+sudo systemctl restart mysql
+
 sudo mariadb -uroot -e "CREATE DATABASE IF NOT EXISTS vagrant";
 sudo mariadb -uroot -e "CREATE USER IF NOT EXISTS 'vagrant'@'%' IDENTIFIED BY 'vagrant';"
 sudo mariadb -uroot -e "GRANT ALL PRIVILEGES ON vagrant.* TO 'vagrant'@'%';"
