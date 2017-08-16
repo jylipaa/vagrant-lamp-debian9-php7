@@ -7,7 +7,9 @@ MariaDB will also be setup with a user vagrant (p: vagrant) granted with all opt
 ## Getting Started
 
 Clone, run ``` vagrant up ``` and start developing. If everything goes 
-well and there weren't any port conflicts (see Vagrant output), you should see phpinfo() in http://localhost:8080
+well and there weren't any port conflicts (see Vagrant output), you should see phpinfo() in http://localhost:8080. 
+
+Apache's webroot is set to /public.
 
 ### Prerequisites
 
@@ -15,10 +17,6 @@ VirtualBox and Vagrant with vagrant-vbguest plugin. When VirtualBox and Vagrant 
 ```
 vagrant plugin install vagrant-vbguest
 ```
-
-## TODO
-
-* Xdebug remote debugging
 
 ## Authors
 

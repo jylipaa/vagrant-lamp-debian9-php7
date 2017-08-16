@@ -18,6 +18,6 @@ Vagrant.configure("2") do |config|
     vb.name = "vagrant lamp"
   end
 
-  config.vm.provision "shell", path: "scripts/vagrant/provision-lamp.sh"
+  config.vm.provision "shell", path: "resources/vagrant/provision-lamp.sh"
 
 end
